@@ -15,10 +15,14 @@ def require_python_3_6(required_major=3, required_minor=6):
         .format(major_version, minor_version, required_major, required_minor)
 
     if (major_version != required_major):
+        print("major error")
         raise Exception(error_msg)
 
     if (minor_version < required_minor):
+        print("minor error")
         raise Exception(error_msg)
+
+    print(python_version)
 
 
 def python_3_6_handler(function):
