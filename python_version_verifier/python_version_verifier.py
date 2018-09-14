@@ -1,10 +1,8 @@
 import sys
 from functools import wraps
 
-python_version = sys.version_info
 
-
-def require_python_3_6(required_major=3, required_minor=6):
+def require_python_3_6(python_version, required_major=3, required_minor=6):
 
     major_version = python_version[0]
     minor_version = python_version[1]
@@ -29,7 +27,8 @@ def python_3_6_handler(function):
     @wraps(function)
     def wrapper(*args, **kwargs):
         try:
-            require_python_3_6()
+            py_version = sys.version_info
+            require_python_3_6(python_version=py_version)
             function(*args, **kwargs)
         except Exception as err:
             print("{}".format(err))
