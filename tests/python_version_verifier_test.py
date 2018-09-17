@@ -1,13 +1,18 @@
 import pytest
 import sys
 import os
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
 PATH = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, PATH + '/../')
 
 import python_version_verifier
-from python_version_verifier import require_python_3_6
+from python_version_verifier import require_python_3_6, python_3_6_handler
+
+
+def _dummy_handler():
+    message = {"message": "version check passed"}
+    return message
 
 
 @pytest.mark.parametrize("py_version", [(3, 6), (3, 7)])
