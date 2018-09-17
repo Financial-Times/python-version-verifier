@@ -30,4 +30,5 @@ def python_3_6_handler(function):
             function(*args, **kwargs)
         except Exception as err:
             print("{}".format(err))
+            raise err
     return wrapper
