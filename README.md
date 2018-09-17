@@ -3,7 +3,8 @@ Simple module to check python version of lambda environment.
 
 ## Example Usage:
 ```python
-from python_version_verifier import *
+from python_version_verifier import python_3_6_handler
+
 
 @python_3_6_handler
 def lambda_handler():
