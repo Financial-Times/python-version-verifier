@@ -23,10 +23,11 @@ def require_python(python_version, required_major, required_minor):
         print("{}".format(err))
         raise err
 
+
 def python_3_6_handler(function):
     @wraps(function)
     def wrapper(*args, **kwargs):
         py_version = sys.version_info
         require_python(py_version, 3, 6)
-        function(*args, **kwargs)
+        return function(*args, **kwargs)
     return wrapper
