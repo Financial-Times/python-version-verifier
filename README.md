@@ -27,7 +27,7 @@ pip install git+https://github.com/Financial-Times/python-version-verifier.git@m
 
 or add the following to your requirements.txt
 
-git+https://github.com/Financial-Times/python-version-verifier.git@master#egg=python_version_verifier
+git+ssh://git@github.com/Financial-Times/python-version-verifier.git@master#egg=python_version_verifier
 
 
 ## Licence
