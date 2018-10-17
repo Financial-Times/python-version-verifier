@@ -16,9 +16,12 @@ pip install --upgrade pip==10.0.1
 pip install \
     -U \
     -e \
-    "git+ssh://git@github.com/Financial-Times/aws-composer-pipeline-scripts-general.git@master#egg=aws_composer_general[testing]" \
+    "git+ssh://git@github.com/Financial-Times/aws-composer-pipeline-scripts-general.git@master#egg=aws_composer_general[python_release]" \
     -r requirements.txt \
     --process-dependency-links
 
-composer run-tests --coverage --cov_dir=python_version_verifier tests
+composer run-tests --coverage --cov_dir=$(python3 setup.py --name) tests
 xmllint --format tests.xml --output tests.linted.xml && mv tests.linted.xml tests.xml
+
+python3 setup.py sdist bdist_wheel
+twine check dist/*

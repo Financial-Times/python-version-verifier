@@ -1,8 +1,10 @@
+"""Decorator to verify version of python running."""
 import sys
 from functools import wraps
 
 
 def require_python(python_version, required_major, required_minor):
+    """Python version verify."""
     try:
         major_version = python_version[0]
         minor_version = python_version[1]
@@ -12,10 +14,10 @@ def require_python(python_version, required_major, required_minor):
             'please update python to v{2}.{3} or higher'\
             .format(major_version, minor_version, required_major, required_minor)
 
-        if (major_version != required_major):
+        if major_version != required_major:
             raise Exception(error_msg)
 
-        if (minor_version < required_minor):
+        if minor_version < required_minor:
             raise Exception(error_msg)
 
         print(python_version)
@@ -25,6 +27,7 @@ def require_python(python_version, required_major, required_minor):
 
 
 def python_3_6_handler(function):
+    """Decorator."""
     @wraps(function)
     def wrapper(*args, **kwargs):
         py_version = sys.version_info
