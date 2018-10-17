@@ -38,7 +38,7 @@ if grep -q ^__version__ "${VERSION_FILE}"; then
         git push origin --tags
     fi
     NEXT_VERSION=$(git semver --next-patch)
-    sed -i '' -e 's!^__version__ = .*$!__version__ = "'"$NEXT_VERSION"'"!' "${VERSION_FILE}"
+    sed -i'' -e 's!^__version__ = .*$!__version__ = "'"$NEXT_VERSION"'"!' "${VERSION_FILE}"
 else
     echo "__version__ not found in $VERSION_FILE"
     exit 9
