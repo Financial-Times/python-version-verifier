@@ -1,3 +1,7 @@
+[0.0.5]
+Andrew Grant, Thu, 18 Oct 2018 09:55:16 +0200
+    get token from composer secrets
+
 [0.0.4]
 Andrew Grant, Thu, 18 Oct 2018 09:13:31 +0200
     allow to create a github release
