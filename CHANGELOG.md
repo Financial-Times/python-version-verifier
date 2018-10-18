@@ -1,3 +1,16 @@
+[0.0.3]
+Andrew Grant, Wed, 17 Oct 2018 17:08:11 +0200
+    correct sed
+
+Andrew Grant, Wed, 17 Oct 2018 17:02:28 +0200
+    correct sed
+
+Andrew Grant, Wed, 17 Oct 2018 16:49:29 +0200
+    CR
+
+Andrew Grant, Wed, 17 Oct 2018 16:47:30 +0200
+    add release plan
+
 [0.0.2]
 Andrew Grant, Mon, 8 Oct 2018 13:57:20 +0200
     rework routine
