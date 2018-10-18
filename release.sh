@@ -79,10 +79,13 @@ curl \
     "https://api.github.com/repos/$repo_full_name/releases?access_token=${token}"
 
 # PACKAGE
-python3 setup.py sdist bdist_wheel
+python3 setup.py sdist
+python3 setup.py bdist_wheel --universal
 
 # CHECK
+echo "twine check"
 twine check dist/*
 
 # DEPLOY
+echo twine upload --repository-url "https://ce-publish-nexus:${CE_PUBLISH_NEXUS}@nexus.in.ft.com/repository/python-releases/" dist/*
 twine upload --repository-url "https://ce-publish-nexus:${CE_PUBLISH_NEXUS}@nexus.in.ft.com/repository/python-releases/" dist/*
