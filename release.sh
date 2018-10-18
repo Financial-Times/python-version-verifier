@@ -72,12 +72,11 @@ generate_post_data() {
 EOF
 }
 repo_full_name=$(git config --get remote.origin.url | sed 's/.*:\/\/github.com\///;s/.git$//')
-token=$(git config --global github.token)
+token=$(composer decrypt -n github-token-gocd-utilities-new-repo)
 echo "${token} ${repo_full_name}"
 curl \
     --data "$(generate_post_data)" \
     "https://api.github.com/repos/$repo_full_name/releases?access_token=${token}"
-
 
 # PACKAGE
 python3 setup.py sdist bdist_wheel
