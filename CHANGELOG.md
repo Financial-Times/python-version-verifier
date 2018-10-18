@@ -1,3 +1,7 @@
+[0.0.4]
+Andrew Grant, Thu, 18 Oct 2018 09:13:31 +0200
+    allow to create a github release
+
 [0.0.3]
 Andrew Grant, Wed, 17 Oct 2018 17:08:11 +0200
     correct sed
