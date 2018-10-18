@@ -1,3 +1,7 @@
+[0.0.6]
+Andrew Grant, Thu, 18 Oct 2018 10:20:07 +0200
+    debug
+
 [0.0.5]
 Andrew Grant, Thu, 18 Oct 2018 09:55:16 +0200
     get token from composer secrets
