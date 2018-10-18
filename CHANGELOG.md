@@ -1,3 +1,7 @@
+[0.0.7]
+Andrew Grant, Thu, 18 Oct 2018 11:21:39 +0200
+    Add Manifest file
+
 [0.0.6]
 Andrew Grant, Thu, 18 Oct 2018 10:20:07 +0200
     debug
