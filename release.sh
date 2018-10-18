@@ -90,4 +90,4 @@ twine check dist/*
 
 # DEPLOY
 echo twine upload --repository-url "https://ce-publish-nexus:${CE_PUBLISH_NEXUS}@nexus.in.ft.com/repository/python-releases/" dist/*
-twine upload -u ce-publish-nexus -p "${CE_PUBLISH_NEXUS}" --repository-url "https://nexus.in.ft.com/repository/python-releases/" dist/*
+twine upload --verbose -u ce-publish-nexus -p "${CE_PUBLISH_NEXUS}" --repository-url "https://nexus.in.ft.com/repository/python-releases/" dist/*
