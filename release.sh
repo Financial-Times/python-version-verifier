@@ -57,6 +57,28 @@ git push
 git tag -am "${NEXT_VERSION}" "${NEXT_VERSION}"
 git push origin --tags
 
+
+# Create Github Release for Version
+generate_post_data() {
+  cat <<EOF
+{
+  "tag_name": "$NEXT_VERSION",
+  "target_commitish": "master",
+  "name": "$NEXT_VERSION",
+  "body": "Version $NEXT_VERSION",
+  "draft": false,
+  "prerelease": false
+}
+EOF
+}
+repo_full_name=$(git config --get remote.origin.url | sed 's/.*:\/\/github.com\///;s/.git$//')
+token=$(git config --global github.token)
+echo "${token} ${repo_full_name}"
+curl \
+    --data "$(generate_post_data)" \
+    "https://api.github.com/repos/$repo_full_name/releases?access_token=${token}"
+
+
 # PACKAGE
 python3 setup.py sdist bdist_wheel
 
