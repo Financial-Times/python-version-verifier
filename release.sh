@@ -12,8 +12,10 @@ virtualenv -p python3.6 venv >/dev/null 2>&1
 # shellcheck source=/dev/null
 source venv/bin/activate
 
-pip install --upgrade pip==10.0.1
-pip install \
+echo "[pip] v10.0.1 installing..."
+pip -q install --upgrade pip==10.0.1
+echo "[pip] aws_composer_general's python_release installing..."
+pip -q install \
     -U \
     -e \
     "git+ssh://git@github.com/Financial-Times/aws-composer-pipeline-scripts-general.git@master#egg=aws_composer_general[python_release]" \
@@ -25,6 +27,7 @@ rm -rf dist/ build/ "$(python3 setup.py --name).egg-info/"
 
 # RUN_TESTS
 composer run-tests --coverage --cov_dir=python_version_verifier tests
+rm -f setup.cfg  # file only created to run unittests
 xmllint --format tests.xml --output tests.linted.xml && mv tests.linted.xml tests.xml
 
 # PACKAGE
@@ -71,10 +74,9 @@ generate_post_data() {
 }
 EOF
 }
-repo_full_name=$(git config --get remote.origin.url | sed 's/.*:\/\/github.com\///;s/.git$//')
+repo_full_name=$(git config --get remote.origin.url | sed 's/.*://;s/.git$//')
 token=$(composer decrypt -n github-token-gocd-utilities-new-repo)
-echo "${token} ${repo_full_name}"
-curl \
+curl -s \
     --data "$(generate_post_data)" \
     "https://api.github.com/repos/$repo_full_name/releases?access_token=${token}"
 
@@ -88,4 +90,4 @@ twine check dist/*
 
 # DEPLOY
 echo twine upload --repository-url "https://ce-publish-nexus:${CE_PUBLISH_NEXUS}@nexus.in.ft.com/repository/python-releases/" dist/*
-twine upload --repository-url "https://ce-publish-nexus:${CE_PUBLISH_NEXUS}@nexus.in.ft.com/repository/python-releases/" dist/*
+twine upload -u ce-publish-nexus -p "${CE_PUBLISH_NEXUS}" --repository-url "https://nexus.in.ft.com/repository/python-releases/" dist/*
