@@ -40,12 +40,14 @@ else
     echo "__version__ not found in $VERSION_FILE"
     exit 9
 fi
+
 # UPDATE CHANGELOG
-touch CHANGELOG.md
-echo "[$NEXT_VERSION]" > new-CHANGELOG.md
-git log "$(git semver)..HEAD" --no-merges --format="%an, %aD%n    %s%n" >> new-CHANGELOG.md
-cat CHANGELOG.md >> new-CHANGELOG.md
-mv new-CHANGELOG.md CHANGELOG.md
+#touch CHANGELOG.md
+#echo "[$NEXT_VERSION]" > new-CHANGELOG.md
+#git log "$(git semver)..HEAD" --no-merges --format="%an, %aD%n    %s%n" >> new-CHANGELOG.md
+#cat CHANGELOG.md >> new-CHANGELOG.md
+#mv new-CHANGELOG.md CHANGELOG.md
+./changelog.sh
 
 git commit -m "Version $NEXT_VERSION" "${VERSION_FILE}" CHANGELOG.md
 git push
