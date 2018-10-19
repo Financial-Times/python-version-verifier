@@ -20,7 +20,7 @@ pip install \
     -r requirements.txt \
     --process-dependency-links
 
-composer run-tests --coverage --cov_dir=$(python3 setup.py --name) tests
+composer run-tests --coverage --cov_dir="$(python3 setup.py --name)" tests
 xmllint --format tests.xml --output tests.linted.xml && mv tests.linted.xml tests.xml
 
 python3 setup.py sdist bdist_wheel

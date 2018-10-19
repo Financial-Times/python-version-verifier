@@ -26,7 +26,7 @@ pip -q install \
 rm -rf dist/ build/ "$(python3 setup.py --name).egg-info/"
 
 # RUN_TESTS
-composer run-tests --coverage --cov_dir=python_version_verifier tests
+composer run-tests --coverage --cov_dir="$(python3 setup.py --name)" tests
 rm -f setup.cfg  # file only created to run unittests
 xmllint --format tests.xml --output tests.linted.xml && mv tests.linted.xml tests.xml
 
@@ -34,32 +34,23 @@ xmllint --format tests.xml --output tests.linted.xml && mv tests.linted.xml test
 # BUMP VERSION
 VERSION_FILE=$(python3 setup.py --name)/__init__.py
 if grep -q ^__version__ "${VERSION_FILE}"; then
-    git semver --next-patch >/dev/null 2>/dev/null
-    if [ "$?" -eq "1" ]; then
-        # create initial tag
-        git tag -am 0.0.1 0.0.1
-        git push origin --tags
-    fi
     NEXT_VERSION=$(git semver --next-patch)
     sed -i'' -e 's!^__version__ = .*$!__version__ = "'"$NEXT_VERSION"'"!' "${VERSION_FILE}"
 else
     echo "__version__ not found in $VERSION_FILE"
     exit 9
 fi
+
 # UPDATE CHANGELOG
-touch CHANGELOG.md
-echo "[$NEXT_VERSION]" > new-CHANGELOG.md
-git log "$(git semver)..HEAD" --no-merges --format="%an, %aD%n    %s%n" >> new-CHANGELOG.md
-cat CHANGELOG.md >> new-CHANGELOG.md
-mv new-CHANGELOG.md CHANGELOG.md
+#touch CHANGELOG.md
+#echo "[$NEXT_VERSION]" > new-CHANGELOG.md
+#git log "$(git semver)..HEAD" --no-merges --format="%an, %aD%n    %s%n" >> new-CHANGELOG.md
+#cat CHANGELOG.md >> new-CHANGELOG.md
+#mv new-CHANGELOG.md CHANGELOG.md
+./changelog.sh
 
 git commit -m "Version $NEXT_VERSION" "${VERSION_FILE}" CHANGELOG.md
 git push
-
-## Tag Release/Tag and push back to GitHub
-#git tag -am "${NEXT_VERSION}" "${NEXT_VERSION}"
-#git push origin --tags
-
 
 # Create Github Release for Version
 generate_post_data() {

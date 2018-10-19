@@ -1,60 +1,65 @@
-[0.0.9]
-Andrew Grant, Fri, 19 Oct 2018 09:50:36 +0200
-    no need to push a tag via git, using github's release tagging method
+#CHANGELOG ON 2018-10-19
 
-Andrew Grant, Thu, 18 Oct 2018 11:42:15 +0200
-    add verbose
+### 2018-10-19
+    - add development documenation to README
+    - correct manifest
+    - Version 0.0.9
+    - no need to push a tag via git, using github's release tagging method
+    - add verbose
+    - Version 0.0.8
+    - Version 0.0.7
+    - update manifest
+    - Add Manifest file
 
-[0.0.8]
-Andrew Grant, Thu, 18 Oct 2018 11:34:01 +0200
-    update manifest
+### 2018-10-18
+    - Version 0.0.6
+    - debug
+    - Version 0.0.5
+    - get token from composer secrets
+    - Version 0.0.4
+    - allow to create a github release
+    - Version 0.0.3
+    - correct sed
+    - correct sed
+    - CR
+    - add release plan
+    - Version 0.0.2
 
-[0.0.7]
-Andrew Grant, Thu, 18 Oct 2018 11:21:39 +0200
-    Add Manifest file
+### 2018-10-17
+    - rework routine
 
-[0.0.6]
-Andrew Grant, Thu, 18 Oct 2018 10:20:07 +0200
-    debug
+### 2018-10-08
+    - update ref details
 
-[0.0.5]
-Andrew Grant, Thu, 18 Oct 2018 09:55:16 +0200
-    get token from composer secrets
+### 2018-10-01
+    - fixed wrapper not returning function (#12)
 
-[0.0.4]
-Andrew Grant, Thu, 18 Oct 2018 09:13:31 +0200
-    allow to create a github release
+### 2018-09-27
+    - Update README.md
+    - updated tests and tweaked require_python
+    - moved try catch
+    - pass raised exception
 
-[0.0.3]
-Andrew Grant, Wed, 17 Oct 2018 17:08:11 +0200
-    correct sed
+### 2018-09-17
+    - updated readme
+    - Update README.md
+    - Revert "Update README.md"
+    - pycodestyle compliance changes
+    - removed some print statements
 
-Andrew Grant, Wed, 17 Oct 2018 17:02:28 +0200
-    correct sed
+### 2018-09-14
+    - Update README.md
+    - resolved bug with setting python version
+    - fixed path reference between test and app
+    - added test requirements
 
-Andrew Grant, Wed, 17 Oct 2018 16:49:29 +0200
-    CR
+### 2018-09-13
+    - added tests file and moved tests
+    - Create requirements-test.txt
+    - Create requirements.txt
 
-Andrew Grant, Wed, 17 Oct 2018 16:47:30 +0200
-    add release plan
-
-[0.0.2]
-Andrew Grant, Mon, 8 Oct 2018 13:57:20 +0200
-    rework routine
-
-Andrew Grant, Mon, 1 Oct 2018 11:35:17 +0200
-    update ref details
-
-abdulbaki-ft, Thu, 27 Sep 2018 11:29:17 +0100
-    fixed wrapper not returning function (#12)
-
-[0.0.2]
-Andrew Grant, Mon, 8 Oct 2018 13:57:20 +0200
-    rework routine
-
-Andrew Grant, Mon, 1 Oct 2018 11:35:17 +0200
-    update ref details
-
-abdulbaki-ft, Thu, 27 Sep 2018 11:29:17 +0100
-    fixed wrapper not returning function (#12)
-
+### 2018-09-12
+    - typo in directory
+    - updated readme with license info
+    - update repo structure and added readme
+    - initial pass at the python version check code

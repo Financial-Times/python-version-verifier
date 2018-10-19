@@ -1,5 +1,3 @@
 include *.md
 include *.txt
-global-exclude *.py[co]
-global-include *.py
 prune tests

@@ -34,6 +34,23 @@ or add the following to your requirements.txt
 git+ssh://git@github.com/Financial-Times/python-version-verifier.git@master#egg=python_version_verifier
 ```
 
+## Development
+
+```bash
+mkvirtualenv --python=$(command -v python3.6) temp_venv
+pip install -U -e \
+    "git+ssh://git@github.com/Financial-Times/aws-composer-pipeline-scripts-general.git@master#egg=aws_composer_general[python_release]" \
+    -r requirements.txt \
+    --process-dependency-links
+export AWS_DEFAULT_REGION=eu-west-1
+```
+
+You can verify tests by:
+
+```bash
+composer run-tests --coverage --cov_dir="$(python3 setup.py --name)" tests/
+```
+
 ## Licence
 
 This software is published by the Financial Times under the [MIT licence](http://opensource.org/licenses/MIT).
