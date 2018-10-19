@@ -49,8 +49,10 @@ fi
 #mv new-CHANGELOG.md CHANGELOG.md
 ./changelog.sh
 
-git commit -m "Version $NEXT_VERSION" "${VERSION_FILE}" CHANGELOG.md
-git push
+git config --global user.email "cloud.enablement@ft.com"
+git config --global user.name "cloud-enablement-ft"
+git commit -m "Version $NEXT_VERSION" "${VERSION_FILE}" CHANGELOG.md >/dev/null
+git push -f
 
 # Create Github Release for Version
 generate_post_data() {
