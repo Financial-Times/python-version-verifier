@@ -9,7 +9,7 @@ git log --no-merges --format="%cd" --date=short --no-merges --all | sort -u -r |
     echo >> $FILE
     echo "###" $NEXT >> $FILE
   fi
-  GIT_PAGER=cat git log --no-merges --format="    * %s" --since=$DATE --until=$NEXT --all >> $FILE
+  GIT_PAGER=cat git log --no-merges --format="  * %s" --since=$DATE --until=$NEXT --all >> $FILE
   NEXT=$DATE
 done
 
