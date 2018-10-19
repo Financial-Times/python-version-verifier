@@ -52,7 +52,7 @@ fi
 git config --global user.email "cloud.enablement@ft.com"
 git config --global user.name "cloud-enablement-ft"
 git commit -m "Version $NEXT_VERSION" "${VERSION_FILE}" CHANGELOG.md >/dev/null
-git push -f
+git push
 
 # Create Github Release for Version
 generate_post_data() {
