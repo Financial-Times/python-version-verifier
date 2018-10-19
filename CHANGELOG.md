@@ -1,3 +1,10 @@
+[0.0.9]
+Andrew Grant, Fri, 19 Oct 2018 09:50:36 +0200
+    no need to push a tag via git, using github's release tagging method
+
+Andrew Grant, Thu, 18 Oct 2018 11:42:15 +0200
+    add verbose
+
 [0.0.8]
 Andrew Grant, Thu, 18 Oct 2018 11:34:01 +0200
     update manifest
