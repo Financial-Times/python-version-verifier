@@ -13,4 +13,5 @@ git log --no-merges --format="%cd" --date=short --no-merges --all | sort -u -r |
   NEXT=$DATE
 done
 
-sed -i'' -E 's!\#([[:digit:]]*)![#\1]\(../../pull/\1\)!g' CHANGELOG.md
+sed -i'' -E 's!\#([[:digit:]]+)![#\1]\(../../pull/\1\)!g' CHANGELOG.md
+sed -i'' -E 's!Version ([[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+)!Version [\1]\(../../releases/tag/\1)!g' CHANGELOG.md
