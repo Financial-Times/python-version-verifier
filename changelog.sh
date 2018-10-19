@@ -13,4 +13,4 @@ git log --no-merges --format="%cd" --date=short --no-merges --all | sort -u -r |
   NEXT=$DATE
 done
 
-sed -i'' -e 's!\#([[:digit:]]*)![#\1]\(../../pull/\1\)!g' CHANGELOG.md
+sed -i'' -E 's!\#([[:digit:]]*)![#\1]\(../../pull/\1\)!g' CHANGELOG.md
