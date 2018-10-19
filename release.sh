@@ -56,9 +56,9 @@ mv new-CHANGELOG.md CHANGELOG.md
 git commit -m "Version $NEXT_VERSION" "${VERSION_FILE}" CHANGELOG.md
 git push
 
-# Tag Release/Tag and push back to GitHub
-git tag -am "${NEXT_VERSION}" "${NEXT_VERSION}"
-git push origin --tags
+## Tag Release/Tag and push back to GitHub
+#git tag -am "${NEXT_VERSION}" "${NEXT_VERSION}"
+#git push origin --tags
 
 
 # Create Github Release for Version
