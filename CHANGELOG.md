@@ -1,6 +1,7 @@
 # Change Log created on 2018-10-22
 
 ### 2018-10-22
+  * Version [0.0.24](../../releases/tag/0.0.24)
   * Cleanup remove scripts no longer required here
   * Version [0.0.23](../../releases/tag/0.0.23)
   * Version [0.0.22](../../releases/tag/0.0.22)
@@ -15,10 +16,10 @@
   * Version [0.0.14](../../releases/tag/0.0.14)
   * Version [0.0.14](../../releases/tag/0.0.14)
   * Version [0.0.13](../../releases/tag/0.0.13)
-  * Version [0.0.12](../../releases/tag/0.0.12)
-  * dont force
 
 ### 2018-10-19
+  * Version [0.0.12](../../releases/tag/0.0.12)
+  * dont force
   * correct changelog
   * Version [0.0.11](../../releases/tag/0.0.11)
   * correct MD change log
@@ -62,9 +63,9 @@
   * fixed wrapper not returning function ([#12](../../pull/12))
   * Update README.md
   * updated tests and tweaked require_python
-  * moved try catch
 
 ### 2018-09-17
+  * moved try catch
   * pass raised exception
 
 ### 2018-09-14
