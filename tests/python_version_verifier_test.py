@@ -1,7 +1,7 @@
-import pytest
+"""Unit tests to validate python version verifier."""
 import sys
 import os
-from unittest.mock import patch, MagicMock
+import pytest
 
 PATH = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, PATH + '/../')
