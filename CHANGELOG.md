@@ -1,6 +1,7 @@
 # Change Log created on 2018-10-22
 
 ### 2018-10-22
+  * Version [0.0.18](../../releases/tag/0.0.18)
   * Version [0.0.17](../../releases/tag/0.0.17)
   * Version [0.0.16](../../releases/tag/0.0.16)
   * Version [0.0.15](../../releases/tag/0.0.15)
