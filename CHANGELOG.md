@@ -1,6 +1,7 @@
 # Change Log created on 2018-10-22
 
 ### 2018-10-22
+  * Version [0.0.22](../../releases/tag/0.0.22)
   * Version [0.0.21](../../releases/tag/0.0.21)
   * Version [0.0.20](../../releases/tag/0.0.20)
   * Version [0.0.19](../../releases/tag/0.0.19)
@@ -12,12 +13,13 @@
   * Version [0.0.14](../../releases/tag/0.0.14)
   * Version [0.0.14](../../releases/tag/0.0.14)
   * Version [0.0.13](../../releases/tag/0.0.13)
+  * update change log format
   * Version [0.0.12](../../releases/tag/0.0.12)
   * dont force
   * correct changelog
-  * Version [0.0.11](../../releases/tag/0.0.11)
 
 ### 2018-10-19
+  * Version [0.0.11](../../releases/tag/0.0.11)
   * correct MD change log
   * correction to gocd Commit user details
   * Version [0.0.10](../../releases/tag/0.0.10)
@@ -76,10 +78,10 @@
   * added test requirements
 
 ### 2018-09-13
+
+### 2018-09-12
   * added tests file and moved tests
   * Create requirements-test.txt
   * Create requirements.txt
-
-### 2018-09-12
   * typo in directory
   * updated readme with license info
