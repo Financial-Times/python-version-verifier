@@ -1,6 +1,7 @@
 # Change Log created on 2018-10-22
 
 ### 2018-10-22
+  * Version [0.0.17](../../releases/tag/0.0.17)
   * Version [0.0.16](../../releases/tag/0.0.16)
   * Version [0.0.15](../../releases/tag/0.0.15)
   * Version [0.0.14](../../releases/tag/0.0.14)
@@ -44,9 +45,9 @@
   * Version [0.0.2](../../releases/tag/0.0.2)
 
 ### 2018-10-17
-  * rework routine
 
 ### 2018-10-08
+  * rework routine
 
 ### 2018-10-01
   * update ref details
