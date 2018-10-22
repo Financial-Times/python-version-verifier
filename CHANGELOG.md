@@ -1,6 +1,7 @@
 # Change Log created on 2018-10-22
 
 ### 2018-10-22
+  * Version [0.0.25](../../releases/tag/0.0.25)
   * Version [0.0.24](../../releases/tag/0.0.24)
   * Cleanup remove scripts no longer required here
   * Version [0.0.23](../../releases/tag/0.0.23)
@@ -16,6 +17,7 @@
   * Version [0.0.14](../../releases/tag/0.0.14)
   * Version [0.0.14](../../releases/tag/0.0.14)
   * Version [0.0.13](../../releases/tag/0.0.13)
+  * update change log format
 
 ### 2018-10-19
   * Version [0.0.12](../../releases/tag/0.0.12)
