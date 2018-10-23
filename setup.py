@@ -14,6 +14,7 @@ setuptools.setup(
     url=python_version_verifier.__uri__,
     packages=setuptools.find_packages(),
     classifiers=(
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
