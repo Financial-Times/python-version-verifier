@@ -10,7 +10,7 @@ __title__ = "python_version_verifier"
 __summary__ = "A python 3 verions checking library for python functions"
 __uri__ = "https://github.com/Financial-Times/python-version-verifier"
 
-__version__ = "0.0.26"
+__version__ = "0.0.27"
 
 __author__ = "Financial Times - Cloud Enablement Team"
 __email__ = "cloud.enablement@ft.com"
