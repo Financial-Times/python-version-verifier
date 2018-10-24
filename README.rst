@@ -21,7 +21,7 @@ raised by the version verifier are logged
 If an exception is triggered due to the python version, the output will
 be similar to:
 
-.. code:: echo
+.. code::
 
    Detected Python 2.7. Python 3.6 or above is required, please update python to v3.6 or higher
 
