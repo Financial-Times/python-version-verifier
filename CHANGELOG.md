@@ -1,7 +1,12 @@
-# Change Log created on 2018-10-23
+# Change Log created on 2018-10-25
+  * remove echo
+  * Move README to RST from Markdown to allow building
+
+### 2018-10-24
+  * Version [0.0.27](../../releases/tag/0.0.27)
+  * add classifier
 
 ### 2018-10-23
-  * add classifier
   * no real change simply pep8d the unit tests
   * Version [0.0.26](../../releases/tag/0.0.26)
   * Version [0.0.25](../../releases/tag/0.0.25)
@@ -32,23 +37,23 @@
   * Version [0.0.10](../../releases/tag/0.0.10)
   * correct change log
   * alter changelog format/creation
-
-### 2018-10-19
   * add development documenation to README
   * correct manifest
   * Version [0.0.9](../../releases/tag/0.0.9)
   * no need to push a tag via git, using github's release tagging method
+
+### 2018-10-19
   * add verbose
   * Version [0.0.8](../../releases/tag/0.0.8)
   * Version [0.0.7](../../releases/tag/0.0.7)
   * update manifest
   * Add Manifest file
-
-### 2018-10-18
   * Version [0.0.6](../../releases/tag/0.0.6)
   * debug
   * Version [0.0.5](../../releases/tag/0.0.5)
   * get token from composer secrets
+
+### 2018-10-18
   * Version [0.0.4](../../releases/tag/0.0.4)
   * allow to create a github release
   * Version [0.0.3](../../releases/tag/0.0.3)
